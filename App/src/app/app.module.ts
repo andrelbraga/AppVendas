@@ -1,18 +1,36 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-
+import { BlockUIModule } from 'ng-block-ui';
 import { AppComponent } from './app.component';
+
+
+import { AppRoutingModule } from './app.routing.module';
+
+
+
+import { HomeModule } from './home/home.module';
+import { NavModule } from './nav/nav.module';
+import { HeaderModule } from './header/header.module';
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent
   ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   imports: [
-    BrowserModule
+    AppRoutingModule,
+    BrowserModule,
+    BlockUIModule,
+    HomeModule,
+    NavModule,
+    HeaderModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+  ],
+  bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {}
