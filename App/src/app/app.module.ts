@@ -14,6 +14,7 @@ import { NavModule } from './nav/nav.module';
 import { HeaderModule } from './header/header.module';
 import { FooterModule } from './footer/footer.module';
 import { BookModule } from './book/book.module';
+import { FinancingModule } from './financing/financing.module';
 
 
 
@@ -30,7 +31,8 @@ import { BookModule } from './book/book.module';
     NavModule,
     HeaderModule,
     FooterModule,
-    BookModule
+    BookModule,
+    FinancingModule
   ],
   providers: [
   ],
