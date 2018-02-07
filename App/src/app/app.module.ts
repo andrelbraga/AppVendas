@@ -12,7 +12,8 @@ import { AppRoutingModule } from './app.routing.module';
 import { HomeModule } from './home/home.module';
 import { NavModule } from './nav/nav.module';
 import { HeaderModule } from './header/header.module';
-
+import { FooterModule } from './footer/footer.module';
+import { BookModule } from './book/book.module';
 
 
 
@@ -27,7 +28,9 @@ import { HeaderModule } from './header/header.module';
     BlockUIModule,
     HomeModule,
     NavModule,
-    HeaderModule
+    HeaderModule,
+    FooterModule,
+    BookModule
   ],
   providers: [
   ],

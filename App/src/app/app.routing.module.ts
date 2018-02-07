@@ -3,11 +3,14 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { BookComponent } from './book/book.component';
+
 
 const appRoutes: Routes = [
 
-    { path: '**',   redirectTo: '', pathMatch: 'full' },
-    { path: '', component: AppComponent }
+    { path: '',   redirectTo: 'home', pathMatch: 'full' },
+    { path: 'home', component: HomeComponent } 
 
 ];
 

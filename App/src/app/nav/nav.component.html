@@ -12,19 +12,20 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul id="menu" class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Catálogo</a>
+                            <a class="nav-link" routerLink="/book" routerLinkActive="active">Catálogo</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Financiamento</a>
+                            <a class="nav-link" routerLink="/financing" routerLinkActive="active">Financiamento</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contato</a>
+                            <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contato</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        </div>
+    <router-outlet></router-outlet>
+</div>

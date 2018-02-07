@@ -1,25 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-import { FooterComponent } from './footer.component';
-import { FooterRoutingModule } from './footer.routing.module';
-
+import { BookComponent } from './book.component';
+import { BookRoutingModule } from './book.routing.module';
 
 import { HeaderModule } from '../header/header.module';
 
 
 @NgModule({
   declarations: [
-    FooterComponent
+    BookComponent
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   imports: [
+    BookRoutingModule,
     BrowserModule,
-    FooterRoutingModule,
     HeaderModule
   ],
-  exports: [ FooterComponent ],
-  providers: [ ],
-  bootstrap: [ FooterComponent ]
+  providers: [
+  ],
+  bootstrap: [ BookComponent ]
 })
-export class FooterModule {}
+export class BookModule {}
