@@ -4,12 +4,16 @@ html * {
     border-radius: 0px !important;
 }
 
+nav{
+    background-color: white !important;
+}
+
 header{
-    padding-top: 57px;
+    padding-top: 133px;
 }
 
 #financing{
-    padding-top: 57px;
+    padding-top: 150px;
 }
 
 #img-logo{
