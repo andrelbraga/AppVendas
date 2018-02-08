@@ -4,13 +4,40 @@ html * {
     border-radius: 0px !important;
 }
 
+header{
+    padding-top: 57px;
+}
+
+#financing{
+    padding-top: 57px;
+}
+
+#img-logo{
+    background: url('assets/img/images/nepo.png') no-repeat !important;
+    width: 400px; /* a largura da imagem */
+    height: 100px;  /* a altura da imagem */
+}
+
 @media (max-width: 992px ) {
     header{
-        padding-top: 57px;
+        padding-top: 81px;
     }
 
     #financing{
-        padding-top: 57px;
+        padding-top: 90px;
     }
+
+    #img-logo{
+        background: url('assets/img/images/nepo-lg.png') no-repeat !important;
+        width: 160px;  /* a largura da imagem */
+        height: 50px;  /* a altura da imagem */
+    }
+
+    /* #message-alert{
+        background-color: #333;
+        width: 690px;
+        top: 77%;
+        position: fixed;     
+    } */
 
 }
