@@ -12,8 +12,8 @@ header{
     padding-top: 133px;
 }
 
-#financing{
-    padding-top: 150px;
+#financing, #contact, #order{
+    padding-top: 153px;
 }
 
 #img-logo{
@@ -22,19 +22,29 @@ header{
     height: 100px;  /* a altura da imagem */
 }
 
+#required{
+    font: 20px arial, sans-serif; 
+    color:red;
+}
+
+
 @media (max-width: 992px ) {
     header{
         padding-top: 81px;
     }
 
-    #financing{
+    #financing, #contact, #order{
         padding-top: 90px;
     }
 
     #img-logo{
-        background: url('assets/img/images/nepo-lg.png') no-repeat !important;
+        background: url('assets/img/images/nepo-lgg.png') no-repeat !important;
         width: 160px;  /* a largura da imagem */
         height: 50px;  /* a altura da imagem */
+    }
+
+    #quebra{
+        display: none;
     }
 
     /* #message-alert{

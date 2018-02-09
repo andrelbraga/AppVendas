@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
-import { NavComponent } from './nav.component';
+import { OrderComponent } from './order.component';
 
 const appRoutes: Routes = [
 
-   { path: 'nav', redirectTo: 'nav', pathMatch: 'full' },
-   { path: 'nav', component: NavComponent }
+   { path: 'order', redirectTo: 'order', pathMatch: 'full' },
+   { path: 'order', component: OrderComponent }
 ];
 
 @NgModule({
@@ -15,8 +15,8 @@ const appRoutes: Routes = [
     CommonModule,
     RouterModule.forRoot(appRoutes)
   ],
-  exports: [RouterModule],
+  exports: [ RouterModule ],
   providers: []
 })
 
-export class NavRoutingModule { }
+export class OrderRoutingModule { }

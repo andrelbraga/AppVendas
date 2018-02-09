@@ -1,4 +1,4 @@
-<form id="financing" style="padding-bottom:10px;">
+<form #data="ngForm" (ngSubmit)="enviar(data);" id="financing" style="padding-bottom:10px;">
     <div class="form-group">
         <div class="container">
             <div class="row">
@@ -11,28 +11,28 @@
                       <div class="col-lg-3 col-md-6 mb-4">
                             <div class="form-group">
                                 <label for="Nome">Nome:</label>
-                                <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Nome">
+                                <input ngModel name="name" type="text" class="form-control" aria-describedby="nameHelp">
                             </div>
                       </div>
 
                       <div class="col-lg-3 col-md-6 mb-4">
                             <div class="form-group">
                                 <label for="Data Nascimento">Data Nascimento:</label>
-                                <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Data Nascimento">
+                                <input ngModel name="dataNascimento" type="text" class="form-control" aria-describedby="nameHelp">
                             </div>
                       </div>
 
                       <div class="col-lg-3 col-md-6 mb-4">
                             <div class="form-group">
                                 <label for="Naturalidade">Naturalidade:</label>
-                                <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Naturalidade">
+                                <input ngModel name="naturalidade" type="text" class="form-control" aria-describedby="nameHelp">
                             </div>
                       </div>
 
                       <div class="col-lg-3 col-md-6 mb-4">
                             <div class="form-group">
                                 <label for="CPF">CPF:</label>
-                                <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="CPF">
+                                <input ngModel name="cpf" type="text" class="form-control" aria-describedby="nameHelp">
                             </div>
                       </div>
 
@@ -45,28 +45,28 @@
                                 <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="RG">RG:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="RG">
+                                            <input ngModel name="rg" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Orgão Emissor">Orgão Emissor:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Orgão Emissor">
+                                            <input ngModel name="orgaoEmissor" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Data Emissão">Data Emissão:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Data Emissão">
+                                            <input ngModel name="dataEmissao" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Possui CNH">Possui CNH:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Possui CNH">
+                                            <input ngModel name="cnh" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
@@ -79,28 +79,31 @@
                                 <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Sexo">Sexo:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Sexo">
+                                            <select ngModel name="sexo" class="custom-select">
+                                                <option value="M">Masculino</option>
+                                                <option value="F">Feminino</option>
+                                            </select>
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Estado Civil">Estado Civil:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Estado Civil">
+                                            <input ngModel name="estadoCivil" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Nacionalidade">Nacionalidade:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Nacionalidade">
+                                            <input ngModel name="nacionalidade" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Cep">Cep:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Cep">
+                                            <input ngModel name="cep" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
@@ -113,28 +116,28 @@
                                 <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Endereço Residencial">Endereço Residencial:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Endereço Residencial">
+                                            <input ngModel name="enderecoResidencial" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Nro. /Compl.">Nro. /Compl.:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Nro. /Compl.">
+                                            <input ngModel name="numeroComplemento" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Bairro">Bairro:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Bairro">
+                                            <input ngModel name="bairro" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Estado">Estado:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Estado">
+                                            <input ngModel name="estado" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
@@ -147,28 +150,28 @@
                                 <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Cidade">Cidade:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Cidade">
+                                            <input ngModel name="cidade" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Reside Desde">Reside Desde:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Reside Desde">
+                                            <input ngModel name="resideDesde" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
-                                            <label for="Email">Email:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Email">
+                                            <label for="Email">E-mail:</label>
+                                            <input ngModel name="email" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Telefone Residencial">Telefone Residencial:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Telefone Residencial">
+                                            <input ngModel name="telefoneResidencial" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
@@ -182,30 +185,23 @@
                                 <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Telefone Celular">Telefone Celular:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Telefone Celular">
+                                            <input ngModel name="telefoneCelular" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Nome Pai">Nome Pai:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Nome Pai">
+                                            <input ngModel name="nomePai" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Nome Mãe">Nome Mãe:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Nome Mãe">
+                                            <input ngModel name="nomeMae" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
-
-                                  <!-- <div class="col-lg-3 col-md-6 mb-4">
-                                        <div class="form-group">
-                                            <label for="Nome">Possui CNH</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Nome">
-                                        </div>
-                                  </div> -->
 
                         </div><!-- Sexta Linha -->
                 </div><!-- Sexta Linha -->
@@ -219,28 +215,28 @@
                                 <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Empresa">Empresa:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Empresa">
+                                            <input ngModel name="empresa" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Tipo de Empresa">Tipo de Empresa:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Nome">
+                                            <input ngModel name="tipoEmpresa" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Ocupação">Ocupação:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Ocupação">
+                                            <input ngModel name="ocupacao" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Função">Função:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Função">
+                                            <input ngModel name="funcao" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
@@ -253,28 +249,28 @@
                                 <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Tempo de Serviço">Tempo de Serviço:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Tempo de Serviço">
+                                            <input ngModel name="tempoServico" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="CNPJ (Caso Empresário)">CNPJ (Caso Empresário):</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="CNPJ (Caso Empresário)">
+                                            <input ngModel name="cnpj" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Cep">Cep:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Cep">
+                                            <input ngModel name="cepEmpresa" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Endereço Comercial">Endereço Comercial:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Endereço Comercial">
+                                            <input ngModel name="enderecoComercial" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
@@ -287,28 +283,28 @@
                                 <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Nro. /Compl.">Nro. /Compl.:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Nro. /Compl.">
+                                            <input ngModel name="numeroComplementoEmpresa" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Bairro">Bairro:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Bairro">
+                                            <input ngModel name="bairroEmpresa" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Estado">Estado:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Estado">
+                                            <input ngModel name="estadoEmpresa" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Cidade">Cidade:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Cidade">
+                                            <input ngModel name="cidadeEmpresa" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
@@ -321,28 +317,28 @@
                                 <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Telefone">Telefone:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Telefone">
+                                            <input ngModel name="telefoneEmpresa" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Ramal">Ramal:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Ramal">
+                                            <input ngModel name="ramalEmpresa" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Salário /Renda (Bruto-R$)">Salário /Renda (Bruto-R$):</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Salário /Renda (Bruto-R$)">
+                                            <input ngModel name="renda" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Outros Rendimentos (Bruto-R$)">Outros Rendimentos (Bruto-R$):</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Outros Rendimentos (Bruto-R$)">
+                                            <input ngModel name="rendimento" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
@@ -355,14 +351,14 @@
                                 <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Origem">Origem:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Origem">
+                                            <input ngModel name="origem" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-6 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="(Aposentado/Pensionista) nº Benefício ou Matrícula">(Aposentado/Pensionista) nº Benefício ou Matrícula:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="(Aposentado/Pensionista) nº Benefício ou Matrícula">
+                                            <input ngModel name="beneficio" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
@@ -378,28 +374,28 @@
                                 <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Banco">Banco:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Banco">
+                                            <input ngModel name="bairro" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Agência">Agência:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Agência">
+                                            <input ngModel name="agencia" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Conta Corrente">Conta Corrente:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Conta Corrente">
+                                            <input ngModel name="contaCorrente" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Cliente Desde">Cliente Desde:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Cliente Desde">
+                                            <input ngModel name="clienteDesde" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
@@ -415,21 +411,21 @@
                                 <div class="col-lg-4 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Nome Completo">Nome Completo:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Nome Completo">
+                                            <input ngModel name="nomeReferenciaUm" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-4 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Grau Parentesco">Grau Parentesco:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Grau Parentesco">
+                                            <input ngModel name="grauParentescoUm" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-4 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Telefone Fixo">Telefone Fixo:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Telefone Fixo">
+                                            <input ngModel name="telefoneFixoUm" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
@@ -442,21 +438,21 @@
                                 <div class="col-lg-4 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Nome Completo">Nome Completo:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Nome Completo">
+                                            <input ngModel name="nomeRefenrenciaDois" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-4 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Grau Parentesco">Grau Parentesco:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Grau Parentesco">
+                                            <input ngModel name="grauParentescoDois" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-4 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Telefone Fixo">Telefone Fixo:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Telefone Fixo">
+                                            <input ngModel name="telefoneFixoDois" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
@@ -472,14 +468,14 @@
                                 <div class="col-lg-4 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Nome Contador">Nome Contador:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Nome Contador">
+                                            <input ngModel name="nomeContador" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Telefone">Telefone:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Telefone">
+                                            <input ngModel name="telefoneContador" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
@@ -495,28 +491,28 @@
                                 <div class="col-lg-4 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Marca/Modelo">Marca/Modelo:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Marca/Modelo">
+                                            <input ngModel name="marcaModelo" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-3 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Ano">Ano:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Ano">
+                                            <input ngModel name="ano" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-4 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Cor">Cor:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Cor">
+                                            <input ngModel name="cor" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
                                   <div class="col-lg-4 col-md-6 mb-4">
                                         <div class="form-group">
                                             <label for="Placa">Placa:</label>
-                                            <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Placa">
+                                            <input ngModel name="placa" type="text" class="form-control" aria-describedby="nameHelp">
                                         </div>
                                   </div>
 
@@ -529,7 +525,7 @@
                                 <div class="col-lg-4 col-md-6 mb-4">
                                     <div class="form-group">
                                         <label for="Valor de Entrada">Valor de Entrada:</label>
-                                        <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Valor de Entrada">
+                                        <input ngModel name="valorEntrada" type="text" class="form-control" aria-describedby="nameHelp">
                                     </div>
                                 </div>
 
@@ -537,7 +533,7 @@
                                 <div class="col-lg-3 col-md-6 mb-4">
                                     <div class="form-group">
                                         <label for="Número de Parcelas">Número de Parcelas:</label>
-                                        <select class="custom-select">
+                                        <select ngModel name="numeroParcela" class="custom-select">
                                             <option value="12">12x</option>
                                             <option value="18">18x</option>
                                             <option value="24">24x</option>
@@ -557,5 +553,5 @@
             </div><!-- Row -->
         </div><!-- Container -->
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Enviar</button>
 </form>

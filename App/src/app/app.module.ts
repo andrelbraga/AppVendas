@@ -15,8 +15,8 @@ import { HeaderModule } from './header/header.module';
 import { FooterModule } from './footer/footer.module';
 import { BookModule } from './book/book.module';
 import { FinancingModule } from './financing/financing.module';
-
-
+import { ContactModule } from './contact/contact.module';
+import { OrderModule } from './order/order.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,10 @@ import { FinancingModule } from './financing/financing.module';
     HeaderModule,
     FooterModule,
     BookModule,
-    FinancingModule
+    FinancingModule,
+    ContactModule,
+    OrderModule
+
   ],
   providers: [
   ],
