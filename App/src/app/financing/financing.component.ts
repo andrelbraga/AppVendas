@@ -15,7 +15,7 @@ export class FinancingComponent {
    */
   constructor() { }
 
-   private enviar(data: any) {
+   public enviar(data: any) {
     const listA = data.form.value;
     const list = [];
 
