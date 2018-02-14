@@ -3,9 +3,8 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { BookComponent } from './book.component';
 import { BookRoutingModule } from './book.routing.module';
-
+import { CarModule } from './car/car.module';
 import { HeaderModule } from '../header/header.module';
-
 
 @NgModule({
   declarations: [
@@ -15,7 +14,8 @@ import { HeaderModule } from '../header/header.module';
   imports: [
     BookRoutingModule,
     BrowserModule,
-    HeaderModule
+    HeaderModule,
+    CarModule
   ],
   providers: [
   ],
