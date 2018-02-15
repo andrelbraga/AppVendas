@@ -13,6 +13,7 @@ $app->register(new ServiceControllerServiceProvider());
 $app->register(new AssetServiceProvider());
 $app->register(new HttpFragmentServiceProvider());
 
+
 $app['debug'] = true;
 
 return $app;
