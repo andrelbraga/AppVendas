@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { FinancingComponent } from './financing.component';
 import { FinancingRoutingModule } from './financing.routing.module';
 
-
 @NgModule({
   declarations: [
     FinancingComponent
@@ -16,8 +15,7 @@ import { FinancingRoutingModule } from './financing.routing.module';
     BrowserModule,
     FormsModule
   ],
-  providers: [
-  ],
+  providers: [ ],
   bootstrap: [ FinancingComponent ]
 })
 export class FinancingModule {}

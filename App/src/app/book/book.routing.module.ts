@@ -9,7 +9,7 @@ const appRoutes: Routes = [
 
     { path: 'book',   redirectTo: 'book' },
     { path: 'book', component: BookComponent },
-    { path: 'car/:id', component: CarComponent }
+    { path: 'car/:id/:slug', component: CarComponent }
 
 ];
 

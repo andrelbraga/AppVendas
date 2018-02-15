@@ -1,14 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { BlockUIModule } from 'ng-block-ui';
 import { AppComponent } from './app.component';
 
-
+//Routing
 import { AppRoutingModule } from './app.routing.module';
 
+//Services
+import { FinancingService } from './financing/financing.service';
+import { AuthInterceptor } from './core/authinterceptor.interceptor';
 
 
+//Modules
 import { HomeModule } from './home/home.module';
 import { NavModule } from './nav/nav.module';
 import { HeaderModule } from './header/header.module';
@@ -17,6 +22,7 @@ import { BookModule } from './book/book.module';
 import { FinancingModule } from './financing/financing.module';
 import { ContactModule } from './contact/contact.module';
 import { OrderModule } from './order/order.module';
+
 
 @NgModule({
   declarations: [
@@ -34,11 +40,15 @@ import { OrderModule } from './order/order.module';
     BookModule,
     FinancingModule,
     ContactModule,
-    OrderModule
+    OrderModule,
+    HttpClientModule
 
   ],
-  providers: [
-  ],
+  providers: [ FinancingService, {
+        provide: HTTP_INTERCEPTORS,
+        useClass: AuthInterceptor,
+        multi: true
+  }],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {}

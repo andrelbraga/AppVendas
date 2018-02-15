@@ -1,33 +1,30 @@
 import { Component } from '@angular/core';
-import {NgForm} from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import * as _ from "lodash";
+
+import { FinancingService } from './financing.service';
 
 @Component({
   selector: 'app-financing',
   templateUrl: './financing.component.html',
-  styleUrls: ['./financing.component.css']
+  styleUrls: ['./financing.component.css'],
 })
 
 export class FinancingComponent {
-  
+
   /**
    * Constructor Financing
    */
-  constructor() { }
+  constructor(public financingService: FinancingService) { }
 
    public enviar(data: any) {
     const listA = data.form.value;
-    const list = [];
 
-      _.forEach(listA, function(key, value) {
-        list.push({
-          'item': value,
-          'value': key
-        });
+      this.financingService.get(listA)
+      .subscribe((response: any) => {
+        console.log(response);
+        return response;
       });
-
-    console.log(list);
-    console.log(data.form.controls);
   }
 
 }

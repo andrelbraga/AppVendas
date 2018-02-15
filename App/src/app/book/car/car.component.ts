@@ -16,11 +16,8 @@ export class CarComponent implements OnInit {
                  private router: Router, ) { }
 
     ngOnInit() {
-      let b = null;
-      let a = this.route.paramMap
-        .switchMap((params: ParamMap) =>
-          b = params.get('id'));
-          console.log(b);
+      const slug = this.route.snapshot.paramMap.get('slug');
+      const id = this.route.snapshot.paramMap.get('id');
     }
 
 
