@@ -23,10 +23,12 @@ ini_set('display_errors', 0);
 require_once __DIR__.'/../vendor/autoload.php';
 
 $app = require __DIR__.'/../src/app.php';
-require __DIR__.'/../config/prod.php';
+//require __DIR__.'/../config/prod.php';
 require __DIR__.'/../src/controllers/controllers.php';
 require __DIR__.'/../src/controllers/cars.php';
 require __DIR__.'/../src/controllers/financing.php';
 require __DIR__.'/../src/models/financing.php';
+require __DIR__.'/../src/services/financing.php';
+
 
 $app->run();

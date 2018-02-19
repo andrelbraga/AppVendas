@@ -18,7 +18,7 @@ export class FinancingService {
     private http: HttpClient ) { }
 
   get(data: any) {
-    return this.http.post(environment.urlApiDev, data, { headers: {'Content-Type': 'application/json'} })
+    return this.http.post(environment.urlApiProd + "financing", data, { headers: {'Content-Type': 'application/json'} })
       .map((res) => {
         return res;
       })
