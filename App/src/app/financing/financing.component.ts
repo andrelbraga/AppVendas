@@ -19,11 +19,10 @@ export class FinancingComponent {
 
    public enviar(data: any) {
     const listA = data.form.value;
-    console.log(listA);
 
-      this.financingService.get(listA)
+      this.financingService.post(listA)
       .subscribe((response: any) => {
-        console.log(response);
+        console.log("Retorno "+ JSON.stringify(response));
         return response;
       });
   }

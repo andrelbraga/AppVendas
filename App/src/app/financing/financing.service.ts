@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 
 import { environment } from './../../environments/environment';
@@ -17,12 +18,21 @@ export class FinancingService {
   constructor(
     private http: HttpClient ) { }
 
-  get(data: any) {
-    return this.http.post(environment.urlApiProd + "financing", data, { headers: {'Content-Type': 'application/json'} })
-      .map((res) => {
-        return res;
-      })
-      .catch(err => Observable.throw(err.message) );
+  post(data: any) {
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    return this.http.post(environment.urlApiProd + "/financing", options)
+      .map(this.extractData)
+      .catch(this.handleErrorObservable);
+  }
+
+  private extractData(res: Response) {
+    let body = res.json();
+      return body || {};
+  }
+  private handleErrorObservable (error: Response | any) {
+  console.error(error.message || error);
+  return Observable.throw(error.message || error);
   }
 
 

@@ -44,11 +44,12 @@ import { OrderModule } from './order/order.module';
     HttpClientModule
 
   ],
-  providers: [ FinancingService, {
-        provide: HTTP_INTERCEPTORS,
-        useClass: AuthInterceptor,
-        multi: true
-  }],
+  // providers: [ FinancingService, {
+  //       provide: HTTP_INTERCEPTORS,
+  //       useClass: AuthInterceptor,
+  //       multi: true
+  // }],
+  providers: [ FinancingService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {}

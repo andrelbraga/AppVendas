@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpRequest, HttpHandler, HttpInterceptor, HttpEvent } from '@angular/common/http';
+import { HttpRequest, HttpHandler, HttpHeaders, HttpInterceptor, HttpEvent } from '@angular/common/http';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/throw';
@@ -11,25 +11,18 @@ export class AuthInterceptor implements HttpInterceptor {
     constructor() {}
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        // Clone the request to add the new header.
-        const headers = [
-            '\'Access-Control-Allow-Origin\' : \'*\'',
-            '\'Access-Control-Allow-Methods\' : \'*\'',
-            '\'Access-Control-Max-Age\' : \'1728000\'',
-            '\'Content-Type\': \'application/x-www-form-urlencoded\'',
-            '\'Access-Control-Allow-Credentials\': \'true\''
-        ];
+        //const authReq = req.clone({ headers: req.headers.append('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')});
 
-        const authReq = req.clone({ headers: req.headers.set('Content-Type', 'application/x-www-form-urlencoded')});
-
-        console.log('Sending request with new header now ...');
+        console.log( JSON.stringify(req) + 'Sending request with new header now ...');
 
         // send the newly created request
-        return next.handle(authReq)
+        return next.handle(req).do((e: any)=>{ 
+            console.log(e);
+        })
         .catch((error, caught) => {
         // intercept the respons error and displace it to the console
         console.log('Error Occurred');
-        console.log(error);
+        console.log(JSON.stringify(error));
         // return the error to the method that called it
         return Observable.throw(error);
         }) as any;
