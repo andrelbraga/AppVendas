@@ -17,10 +17,14 @@ export class FinancingComponent {
    */
   constructor(public financingService: FinancingService) { }
 
-   public enviar(data: any) {
+   public async enviar(data: any) {
     const listA = data.form.value;
 
-      this.financingService.post(listA)
+      // await this.financingService.get().subscribe((response) => {
+      //   console.log(response);
+      // })
+
+      await this.financingService.post(listA)
       .subscribe((response: any) => {
         console.log("Retorno "+ JSON.stringify(response));
         return response;

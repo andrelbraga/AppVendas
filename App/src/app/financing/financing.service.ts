@@ -26,7 +26,14 @@ export class FinancingService {
       .catch(this.handleErrorObservable);
   }
 
+  get(){
+    return this.http.get(environment.urlApiProd)
+    .map(this.extractData)
+    .catch(this.handleErrorObservable);
+  }
+
   private extractData(res: Response) {
+    console.log(res);
     let body = res.json();
       return body || {};
   }

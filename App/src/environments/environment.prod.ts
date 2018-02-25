@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  urlApiProd: 'https://appdata.com.br/api/web/index.php',
+  urlApiProd: 'https://appdata.com.br/nepocar/bin/index.php',
   urlApiDev: 'http://localhost:4201/financing'
 };
