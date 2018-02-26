@@ -19,9 +19,7 @@ export class FinancingService {
     private http: HttpClient ) { }
 
   post(data: any) {
-    let headers = new Headers({ 'Content-Type': 'application/json' });
-    let options = new RequestOptions({ headers: headers });
-    return this.http.post(environment.urlApiProd + "/financing", options)
+    return this.http.post(environment.urlApiProd, data,{ headers: { 'Content-Type': 'application/json' } })
       .map(this.extractData)
       .catch(this.handleErrorObservable);
   }
@@ -34,7 +32,7 @@ export class FinancingService {
 
   private extractData(res: Response) {
     console.log(res);
-    let body = res.json();
+    let body = JSON.stringify(res);
       return body || {};
   }
   private handleErrorObservable (error: Response | any) {

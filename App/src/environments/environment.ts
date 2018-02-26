@@ -5,7 +5,7 @@
 
 export const environment = {
   production: false,
-  urlApiProd: 'https://appdata.com.br/nepocar/bin/index.php',
+  urlApiProd: 'https://appdata.com.br/nepocar/bin/src/controllers/financing.controller.php',
   urlApiDev: 'http://localhost:4201/financing'
 };
 
