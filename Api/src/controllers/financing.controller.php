@@ -3,8 +3,8 @@
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-$app->get('/financing/{name}', function ($name) use ($app) {
-    return 'Hello '.$app->escape($name);
+$app->get('/financing', function () use ($app) {
+    return 'Hello Financing';
 });
 
 $app->post('/financing', function() use ($app) {
@@ -12,7 +12,7 @@ $app->post('/financing', function() use ($app) {
     try{
         $data = json_decode(file_get_contents("php://input"));
         FinancingService::SendMail($data);
-        return $app->json("OK");
+        return $app->json(true);
 
     } catch( Exception $e )
     {

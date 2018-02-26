@@ -5,7 +5,7 @@ class FinancingService {
     public function __construct(){
     }
 
-    public function SendMail($data){
+    public static function SendMail($data){
         $entity = new Financing($data);
         $email_message = "Dados do Cliente";
         $email_message .= "Nome Cliente: ".$entity->nome."\n";
