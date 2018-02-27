@@ -3,17 +3,22 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { BlockUIModule } from 'ng-block-ui';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { AppComponent } from './app.component';
 
-//Routing
+// Routing
 import { AppRoutingModule } from './app.routing.module';
 
-//Services
+// Services
 import { FinancingService } from './financing/financing.service';
 import { AuthInterceptor } from './core/authinterceptor.interceptor';
 
 
-//Modules
+// Modules
 import { HomeModule } from './home/home.module';
 import { NavModule } from './nav/nav.module';
 import { HeaderModule } from './header/header.module';
@@ -41,15 +46,18 @@ import { OrderModule } from './order/order.module';
     FinancingModule,
     ContactModule,
     OrderModule,
-    HttpClientModule
-
+    HttpClientModule,
+    NgbModule.forRoot(),
+    BsDropdownModule.forRoot(),
+    TooltipModule.forRoot(),
+    ModalModule.forRoot()
   ],
-  // providers: [ FinancingService, {
-  //       provide: HTTP_INTERCEPTORS,
-  //       useClass: AuthInterceptor,
-  //       multi: true
-  // }],
-  providers: [ FinancingService ],
+  providers: [ FinancingService, {
+        provide: HTTP_INTERCEPTORS,
+        useClass: AuthInterceptor,
+        multi: true
+  }],
+  // providers: [ FinancingService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {}

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { NavRoutingModule } from './nav.routing.module';
 import { NavComponent } from './nav.component';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -13,6 +13,7 @@ import { NavComponent } from './nav.component';
   imports: [
     NavRoutingModule,
     BrowserModule,
+    NgbModule.forRoot()
   ],
   exports: [ NavComponent ],
   providers: [

@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import * as _ from 'lodash';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
-
 
 import { FinancingService } from './financing.service';
 
@@ -14,6 +12,7 @@ import { FinancingService } from './financing.service';
 
 export class FinancingComponent {
   @BlockUI() blockUI: NgBlockUI;
+
   /**
    * Constructor Financing
    */
@@ -29,8 +28,10 @@ export class FinancingComponent {
       await this.financingService.post(listA)
       .subscribe((res: any) => {
 
+
         if (res) {
           this.blockUI.stop();
+
         }
 
         return res;

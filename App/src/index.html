@@ -4,32 +4,16 @@
   <meta charset="utf-8">
   <title>Revenda de Carros</title>
   <base href="/">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-   <!--Bootstrap Plugin 3.3.7-->
-   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-   <!--Font Awesome 5.0.6 -->
-   <!-- <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">       -->
    <!--CDN Google-->
    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
-
 </head>
 <body>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!--Aplicattion Angular 5-->
   <app-root></app-root>
-
-
-  <!-- jQuery 3.3.1 -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <!-- Plugin Bootstrap 4.0.0 -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-  <!--Font Awesome 5.0.6 -->
-  <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> -->
   <script>
     $(function(){
 
@@ -42,12 +26,10 @@
             //Evita que o evento seja notificado aos outros elementos. 
             event.stopPropagation();
         });
-        
         //Clicando no html vai fechar o dropDown
         $('html').on('click', function(){
             dropDown.slideUp();
         });
-      
     })
   </script>
 </body>
